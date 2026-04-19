@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ru" xml:lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Елена Булавинцева – Риэлтор | Комсомольск-на-Амуре</title>
+  <meta name="description" content="Профессиональный риэлтор Елена Булавинцева. Покупка, продажа и аренда недвижимости в Комсомольске-на-Амуре и других городах Дальнего Востока." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter','sans-serif'],
+            serif: ['Playfair Display','serif'],
+          },
+          colors: {
+            primary: { 50:'#f0f4ff',100:'#e0eaff',200:'#c0d3ff',300:'#94b0fd',400:'#6088fb',500:'#3d5ff7',600:'#2842ec',700:'#1e33d8',800:'#1e2fae',900:'#1e2d89',950:'#141c55' },
+            gold: { 400:'#f4c842', 500:'#e6b020', 600:'#c9920a' },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:clip}
+    @media(max-width:640px){
+  p,li,span{overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+  section{overflow-x:hidden!important;max-width:100vw!important}
+  section > div{overflow-x:hidden!important;max-width:100%!important}
+  .grid{overflow-x:hidden!important}
+  #selling .grid,#buying .grid,#renting .grid,#about .grid{grid-template-columns:1fr!important;overflow-x:hidden!important}
+  #selling .max-w-7xl,#buying .max-w-7xl,#renting .max-w-7xl,#about .max-w-7xl{overflow-x:hidden!important;width:100%!important;max-width:100vw!important}
+  #hero .max-w-7xl{padding-left:1rem!important;padding-right:1rem!important;overflow-x:hidden!important;max-width:100vw!important}
+  #hero .grid{grid-template-columns:1fr!important;width:100%!important;overflow-x:hidden!important}
+  #hero p{max-width:calc(100vw - 2rem)!important;overflow:hidden!important;white-space:normal!important}
+  #hero .flex.flex-col{max-width:calc(100vw - 2rem)!important;padding-right:0!important;overflow:hidden!important}
+  #hero{overflow-x:hidden!important}
+}
+    body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a2e;overflow-x:clip;max-width:100vw}
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:#f1f1f1}
+    ::-webkit-scrollbar-thumb{background:#3d5ff7;border-radius:3px}
+
+    /* Navbar */
+    #navbar{transition:background .3s,box-shadow .3s}
+    #navbar.scrolled{background:rgba(255,255,255,.97)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .nav-link{position:relative;font-weight:500;font-size:.875rem;color:#fff;transition:color .2s}
+    #navbar.scrolled .nav-link{color:#1a1a2e}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:#3d5ff7;transition:width .25s}
+    .nav-link:hover::after{width:100%}
+
+    /* Hero – full-screen split */
+    #hero{min-height:100vh;background:#0f1b5c;position:relative;overflow-x:clip}
+    .hero-photo-wrap{position:relative}
+    .hero-photo-wrap::after{
+      content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+      background:linear-gradient(to right,#0f1b5c 0%,transparent 40%);
+      pointer-events:none;z-index:1
+    }
+
+    /* Section headings */
+    .section-badge{display:inline-block;background:#e0eaff;color:#2842ec;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:12px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:#1a1a2e;line-height:1.2}
+    .section-divider{width:50px;height:4px;background:linear-gradient(90deg,#3d5ff7,#6088fb);border-radius:2px;margin-top:12px}
+
+    /* Cards */
+    .card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.07);transition:transform .3s,box-shadow .3s;overflow:hidden}
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(61,95,247,.15)}
+
+    /* Photo sections */
+    .photo-section-img{width:100%;height:100%;object-fit:cover;object-position:center top}
+
+    /* Stat */
+    .stat-number{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;background:linear-gradient(135deg,#2842ec,#6088fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+    /* Property */
+    .property-img{height:200px;object-fit:cover;width:100%;transition:transform .4s}
+    .card:hover .property-img{transform:scale(1.04)}
+    .property-badge{position:absolute;top:12px;left:12px;background:#3d5ff7;color:#fff;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em}
+
+    /* Accordion */
+    .accordion-item{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:10px;transition:box-shadow .2s}
+    .accordion-item.open{box-shadow:0 4px 20px rgba(61,95,247,.12);border-color:#94b0fd}
+    .accordion-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#fff;font-weight:600;font-size:.85rem;color:#1a1a2e;cursor:pointer;transition:background .2s;text-align:left;border:none;outline:none}
+    @media(min-width:640px){.accordion-btn{padding:18px 20px;font-size:.95rem}}
+    .accordion-btn:hover{background:#f0f4ff}
+    .accordion-item.open .accordion-btn{background:#f0f4ff;color:#2842ec}
+    .accordion-chevron{transition:transform .3s;flex-shrink:0}
+    .accordion-item.open .accordion-chevron{transform:rotate(180deg)}
+    .accordion-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 20px;color:#4b5563;font-size:.9rem;line-height:1.7}
+    .accordion-item.open .accordion-body{max-height:500px;padding:0 20px 18px}
+    .step-number{width:28px;height:28px;min-width:28px;border-radius:50%;background:linear-gradient(135deg,#3d5ff7,#6088fb);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-right:14px}
+
+    /* Geo */
+    .geo-card{background:linear-gradient(135deg,#f0f4ff,#fff);border:1px solid #e0eaff;border-radius:16px;padding:24px 20px;text-align:center;transition:transform .3s,box-shadow .3s}
+    .geo-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(61,95,247,.12)}
+
+    /* Certs */
+    .cert-card{border-radius:16px;overflow:hidden;cursor:pointer;position:relative;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+    .cert-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(61,95,247,.18)}
+    .cert-cover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;transition:opacity .35s,transform .35s;background:linear-gradient(135deg,#1e2d89 0%,#3d5ff7 60%,#6088fb 100%)}
+    .cert-card:hover .cert-cover{opacity:0;transform:scale(1.04);pointer-events:none}
+    .cert-cover-icon{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff}
+    .cert-cover-title{color:#fff;font-weight:700;font-size:.85rem;line-height:1.35;letter-spacing:.01em}
+    .cert-cover-hint{color:rgba(255,255,255,.55);font-size:.7rem;display:flex;align-items:center;gap:4px}
+    .cert-img-wrap{width:100%;height:280px;overflow:hidden}
+    .cert-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
+    .cert-card:hover .cert-img-wrap img{transform:scale(1.04)}
+    .cert-caption{display:none}
+
+    /* Testimonials */
+    .testimonial-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);position:relative}
+    .testimonial-card::before{content:'\201C';font-size:5rem;line-height:1;font-family:'Playfair Display',serif;color:#e0eaff;position:absolute;top:10px;left:20px}
+
+    /* Inputs */
+    .input-field{width:100%;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 16px;font-size:.9rem;font-family:'Inter',sans-serif;transition:border-color .2s,box-shadow .2s;outline:none;background:#fafafa}
+    .input-field:focus{border-color:#3d5ff7;box-shadow:0 0 0 3px rgba(61,95,247,.1);background:#fff}
+
+    /* Buttons */
+    .btn-primary{background:linear-gradient(135deg,#2842ec,#3d5ff7);color:#fff;font-weight:600;padding:14px 32px;border-radius:10px;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;letter-spacing:.02em;transition:transform .2s,box-shadow .2s}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(61,95,247,.35)}
+    .btn-primary:active{transform:translateY(0)}
+    .btn-outline{border:2px solid #3d5ff7;color:#3d5ff7;font-weight:600;padding:12px 28px;border-radius:10px;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;font-size:.875rem;transition:background .2s,color .2s}
+    .btn-outline:hover{background:#3d5ff7;color:#fff}
+    .checklist-btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:linear-gradient(135deg,#f4c842,#e6b020);color:#1a1a2e;font-weight:700;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;transition:transform .2s,box-shadow .2s}
+    .checklist-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(230,176,32,.4)}
+
+    /* Social */
+    .social-btn{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;transition:transform .2s,background .2s}
+    .social-btn:hover{transform:scale(1.15)}
+
+    /* Modal */
+    #modal-overlay,#lightbox-overlay{position:fixed;inset:0;z-index:9999;background:rgba(10,15,50,.75);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:20px}
+    #modal-overlay.active,#lightbox-overlay.active{display:flex}
+    .modal-box{background:#fff;border-radius:20px;padding:40px 36px;max-width:440px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:slideUp .3s ease}
+    @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    #lightbox-overlay img{max-width:90vw;max-height:80vh;border-radius:12px;object-fit:contain}
+
+    /* Mobile menu */
+    #mobile-menu{visibility:hidden;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1),visibility 0s .35s}
+    #mobile-menu.open{visibility:visible;transform:translateX(0);transition:transform .35s cubic-bezier(.4,0,.2,1),visibility 0s 0s}
+
+    /* Misc */
+    #progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#3d5ff7,#94b0fd);z-index:10000;transition:width .1s}
+    #back-top{position:fixed;bottom:28px;right:28px;z-index:999;background:#3d5ff7;color:#fff;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(61,95,247,.4);transition:transform .2s}
+    #back-top:hover{transform:translateY(-3px)}
+    #back-top.visible{display:flex}
+    footer{background:#0f1b5c}
+
+    @media(max-width:640px){.modal-box{padding:28px 22px}}
+    section, .max-w-7xl { max-width:100vw; }
+    @media(max-width:640px){
+      #hero .max-w-7xl { padding-left:1rem; padding-right:1rem; }
+      #renting .grid.sm\:grid-cols-2 { grid-template-columns:1fr; }
+      #certs-gallery { grid-template-columns: repeat(2,1fr); }
+      .card.p-8 { padding:1.5rem; }
+      .step-number { margin-right:10px; }
+      .accordion-item.open .accordion-body { padding:0 14px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar" style="width:0%"></div>
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Основная навигация">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 gap-2">
+      <a href="#hero" class="flex items-center gap-2.5" aria-label="На главную">
+        <div class="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center">
+          <i class="fa-solid fa-house-chimney text-white text-base"></i>
+        </div>
+        <span class="font-serif font-bold text-white text-lg hidden sm:block">Елена Булавинцева</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="#about"     class="nav-link">Обо мне</a>
+        <a href="#services"  class="nav-link">Услуги</a>
+        <a href="#listings"  class="nav-link">Объекты</a>
+        <a href="#buying"    class="nav-link">Покупка</a>
+        <a href="#selling"   class="nav-link">Продажа</a>
+        <a href="#renting"   class="nav-link">Аренда</a>
+        <a href="#geography" class="nav-link">География</a>
+        <a href="#reviews"   class="nav-link">Отзывы</a>
+        <a href="#contact"   class="btn-primary px-4 py-2 text-sm rounded-lg">Связаться</a>
+      </div>
+      <button id="burger-btn" class="lg:hidden p-2 text-white ml-auto flex-shrink-0" aria-label="Открыть меню" aria-expanded="false">
+        <i class="fa-solid fa-bars text-xl" id="burger-icon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl flex flex-col" style="visibility:hidden" role="dialog" aria-modal="true">
+  <div class="flex items-center justify-between p-5 border-b border-gray-100">
+    <span class="font-serif font-bold text-primary-700 text-lg">Меню</span>
+    <button id="close-menu" class="p-2 text-gray-500 hover:text-primary-700" aria-label="Закрыть">
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </button>
+  </div>
+  <nav class="flex-1 overflow-y-auto p-5 space-y-1">
+    <a href="#about"     class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-user w-5 text-primary-500"></i>Обо мне</a>
+    <a href="#services"  class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-briefcase w-5 text-primary-500"></i>Услуги</a>
+    <a href="#listings"  class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-building w-5 text-primary-500"></i>Объекты</a>
+    <a href="#buying"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-key w-5 text-primary-500"></i>Покупка</a>
+    <a href="#selling"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-tag w-5 text-primary-500"></i>Продажа</a>
+    <a href="#renting"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-file-contract w-5 text-primary-500"></i>Аренда</a>
+    <a href="#geography" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-map-location-dot w-5 text-primary-500"></i>География</a>
+    <a href="#reviews"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-star w-5 text-primary-500"></i>Отзывы</a>
+    <a href="#contact"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 font-medium hover:bg-primary-50 hover:text-primary-700 transition-colors"><i class="fa-solid fa-envelope w-5 text-primary-500"></i>Контакты</a>
+  </nav>
+  <div class="p-5 border-t border-gray-100">
+    <a href="tel:+79991234567" class="btn-primary w-full text-center block"><i class="fa-solid fa-phone mr-2"></i>Позвонить</a>
+  </div>
+</div>
+<div id="menu-backdrop" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+
+<section id="hero" class="relative min-h-screen flex items-stretch pt-16" style="overflow-x:clip" role="banner">
+  <div class="relative z-10 flex items-center w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style="overflow-x:hidden">
+      <div class="grid lg:grid-cols-2 min-h-[calc(100vh-4rem)]">
+        <div class="flex flex-col justify-center py-16 lg:py-0 w-full min-w-0" style="overflow:hidden;max-width:100%;box-sizing:border-box">
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1.5 text-white/90 text-xs sm:text-sm font-medium mb-6 sm:mb-8 self-start" data-aos="fade-down">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            Принимаю заявки
+          </div>
+          <h1 class="font-serif text-white font-bold leading-tight mb-3" style="font-size:clamp(2rem,8vw,4.2rem)" data-aos="fade-up" data-aos-delay="80">
+            Елена<br>Булавинцева
+          </h1>
+          <p class="text-white/70 text-lg font-light mb-2" data-aos="fade-up" data-aos-delay="120">
+            Риэлтор · Комсомольск-на-Амуре
+          </p>
+          <p class="text-white/60 text-sm leading-relaxed mb-8" style="word-break:break-word;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto;max-width:100%;box-sizing:border-box" data-aos="fade-up" data-aos-delay="160">
+            Покупка, продажа и аренда недвижимости на Дальнем Востоке. Результат – всегда.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-10" data-aos="fade-up" data-aos-delay="200">
+            <a href="#contact" class="btn-primary text-base px-8 py-4">
+              <i class="fa-solid fa-calendar-check mr-2"></i>Бесплатная консультация
+            </a>
+            <a href="#listings" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white hover:text-primary-700 font-semibold px-5 sm:px-8 py-4 rounded-xl transition-all text-sm sm:text-base">
+              Смотреть объекты
+            </a>
+          </div>
+          <div class="flex gap-4 sm:gap-6 mb-10" data-aos="fade-up" data-aos-delay="240">
+            <div class="text-center">
+              <div class="text-white font-bold text-2xl sm:text-3xl font-serif">10+</div>
+              <div class="text-white/50 text-xs mt-0.5">лет опыта</div>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div class="text-center">
+              <div class="text-white font-bold text-2xl sm:text-3xl font-serif">250+</div>
+              <div class="text-white/50 text-xs mt-0.5">сделок</div>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div class="text-center">
+              <div class="text-white font-bold text-2xl sm:text-3xl font-serif">100%</div>
+              <div class="text-white/50 text-xs mt-0.5">довольных</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="280">
+            <span class="text-white/50 text-sm">Напишите:</span>
+            <a href="https://t.me/elena_bulavintseva" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn bg-[#229ED9]/20 hover:bg-[#229ED9] text-white border border-white/20">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://wa.me/79991234567" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn bg-[#25D366]/20 hover:bg-[#25D366] text-white border border-white/20">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://vk.com/elena_bulavintseva" target="_blank" rel="noopener" aria-label="ВКонтакте" class="social-btn bg-[#0077FF]/20 hover:bg-[#0077FF] text-white border border-white/20">
+              <i class="fa-brands fa-vk"></i>
+            </a>
+            <a href="https://max.ru/elena_bulavintseva" target="_blank" rel="noopener" aria-label="Max Messenger" class="social-btn bg-[#0088CC]/20 hover:bg-[#0088CC] text-white border border-white/20 text-xs font-bold">Max</a>
+          </div>
+        </div>
+        <div class="hidden lg:block relative" data-aos="fade-left" data-aos-delay="100">
+          <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0f1b5c] to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0f1b5c] to-transparent z-10 pointer-events-none"></div>
+          <img
+            src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FhjhhSM9txXunb6oUMV05J%2FDSC00922_resized.jpg"
+            alt="Елена Булавинцева – риэлтор"
+            class="w-full h-full object-cover object-top"
+            style="max-height:calc(100vh - 4rem)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/40 text-xs gap-1.5 animate-bounce z-20">
+    <span>Прокрутите вниз</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<section id="about" class="py-0 bg-white overflow-hidden mt-0">
+  <div class="max-w-7xl mx-auto w-full" style="overflow-x:hidden">
+    <div class="grid lg:grid-cols-2">
+      <div class="relative h-[280px] sm:h-[400px] lg:h-auto" data-aos="fade-right">
+        <img
+          src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FAE6XONgkQqve5p28pZRGW%2FDSC00785_resized.jpg"
+          alt="Елена Булавинцева – профессиональный риэлтор"
+          class="w-full h-full object-cover object-top"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white hidden lg:block pointer-events-none"></div>
+      </div>
+      <div class="flex flex-col justify-center px-5 sm:px-10 lg:px-16 py-10 lg:py-16" data-aos="fade-left">
+        <div class="section-badge">Обо мне</div>
+        <h2 class="section-title mb-4">Ваш надежный<br>партнер в недвижимости</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Я – Елена Булавинцева, профессиональный риэлтор с более чем <strong>10-летним опытом</strong> работы на рынке недвижимости Дальнего Востока. Специализируюсь на жилой недвижимости в Комсомольске-на-Амуре, Хабаровске и других городах региона.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Для меня каждая сделка – это доверие человека в одном из важнейших решений жизни. Именно поэтому я сопровождаю клиента от первого обращения до получения ключей, беря на себя все юридические и организационные вопросы.
+        </p>
+        <div class="grid grid-cols-3 gap-3 mb-8">
+          <div class="text-center p-4 bg-[#f8f9fc] rounded-2xl">
+            <div class="stat-number">10+</div>
+            <div class="text-gray-500 text-sm mt-1 font-medium">лет опыта</div>
+          </div>
+          <div class="text-center p-4 bg-[#f8f9fc] rounded-2xl">
+            <div class="stat-number">250+</div>
+            <div class="text-gray-500 text-sm mt-1 font-medium">сделок</div>
+          </div>
+          <div class="text-center p-4 bg-[#f8f9fc] rounded-2xl">
+            <div class="stat-number">100%</div>
+            <div class="text-gray-500 text-sm mt-1 font-medium">отзывов</div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-2 py-3 px-6">
+            <i class="fa-solid fa-handshake"></i>Обсудить задачу
+          </a>
+          <a href="tel:+79991234567" class="btn-outline py-3 px-6 inline-flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i>Позвонить
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-20 bg-[#f8f9fc]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-badge">Услуги</div>
+      <h2 class="section-title">Чем я могу помочь</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-6 mb-16">
+      <div class="card p-8" data-aos="fade-up" data-aos-delay="0">
+        <div class="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center text-2xl text-primary-600 mb-6">
+          <i class="fa-solid fa-house-circle-check"></i>
+        </div>
+        <h3 class="font-bold text-xl text-gray-900 mb-3">Покупка недвижимости</h3>
+        <p class="text-gray-500 leading-relaxed mb-5 text-sm">Подберу объекты по вашим критериям, проведу юридическую проверку и сопровожу сделку до получения ключей. Работаю с ипотекой и материнским капиталом.</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary-500 text-xs"></i>Подбор вариантов</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary-500 text-xs"></i>Юридическая проверка</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary-500 text-xs"></i>Апостех и субсидии</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary-500 text-xs"></i>Регистрация прав</li>
+        </ul>
+      </div>
+      <div class="card p-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-2xl text-green-600 mb-6">
+          <i class="fa-solid fa-circle-dollar-to-slot"></i>
+        </div>
+        <h3 class="font-bold text-xl text-gray-900 mb-3">Продажа недвижимости</h3>
+        <p class="text-gray-500 leading-relaxed mb-5 text-sm">Проведу профессиональную оценку, организую фотосъемку и найду покупателя по лучшей цене в разумные сроки.</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i>Рыночная оценка</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i>Реклама на 15+ площадках</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i>Переговоры с покупателями</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i>Налоговая консультация</li>
+        </ul>
+      </div>
+      <div class="card p-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-2xl text-amber-600 mb-6">
+          <i class="fa-solid fa-file-contract"></i>
+        </div>
+        <h3 class="font-bold text-xl text-gray-900 mb-3">Аренда недвижимости</h3>
+        <p class="text-gray-500 leading-relaxed mb-5 text-sm">Помогаю найти надежного арендатора или подобрать жилье для аренды. Составляю юридически грамотный договор.</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>Поиск арендаторов/жилья</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>Проверка документов</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>Составление договора</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>Акт приема-передачи</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden relative" style="min-height:260px" data-aos="fade-up">
+      <img
+        src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1400&h=600&fit=crop&crop=center"
+        alt="Недвижимость — уютный интерьер"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-950/80 to-primary-900/40"></div>
+      <div class="relative z-10 p-6 sm:p-10 md:p-14 max-w-lg">
+        <p class="font-serif text-white text-xl sm:text-2xl md:text-3xl font-semibold leading-snug mb-5">
+          «Моя цель – чтобы вы получили лучший результат без лишних нервов»
+        </p>
+        <a href="#contact" class="btn-primary inline-flex items-center gap-2 py-3 px-5 sm:px-6 text-sm">
+          <i class="fa-solid fa-calendar-check"></i>Записаться на консультацию
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4" data-aos="fade-up">
+      <div>
+        <div class="section-badge">Объекты</div>
+        <h2 class="section-title">Актуальные предложения</h2>
+        <div class="section-divider"></div>
+      </div>
+      <a href="#contact" class="btn-outline self-start sm:self-auto">Все объекты <i class="fa-solid fa-arrow-right ml-2"></i></a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="listings-grid"></div>
+  </div>
+</section>
+
+<section id="buying" class="bg-[#f8f9fc] overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2">
+      <div class="relative h-[260px] sm:h-[360px] lg:h-auto order-2 lg:order-1" data-aos="fade-right">
+        <img
+          src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FmvzoFBgDXn2gLW9_QeB2B%2FDSC00993_resized.jpg"
+          alt="Покупка недвижимости"
+          class="w-full h-full object-cover object-top"
+        />
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#f8f9fc]/20 hidden lg:block pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#f8f9fc] hidden lg:block pointer-events-none"></div>
+        <div class="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 bg-white rounded-2xl p-4 shadow-xl z-10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center">
+              <i class="fa-solid fa-key text-primary-600"></i>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Покупка</div>
+              <div class="text-gray-500 text-xs">5 шагов к вашей квартире</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center px-5 sm:px-10 lg:px-14 py-10 lg:py-16 order-1 lg:order-2" data-aos="fade-left">
+        <div class="section-badge">Покупателям</div>
+        <h2 class="section-title mb-3">Как купить квартиру</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-500 text-sm mb-8">Пошаговый гид, который поможет не допустить ошибок при покупке недвижимости.</p>
+        <div id="buying-accordion" class="space-y-3"></div>
+        <div>
+          <button class="checklist-btn" onclick="openModal('buyer')">
+            <i class="fa-solid fa-file-arrow-down text-lg"></i>Скачать чеклист покупателя
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="selling" class="bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2">
+      <div class="flex flex-col justify-center px-5 sm:px-10 lg:px-16 py-10 lg:py-16" data-aos="fade-right">
+        <div class="section-badge">Продавцам</div>
+        <h2 class="section-title mb-3">Как продать квартиру</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-500 text-sm mb-8">Все этапы продажи: от оценки до получения денег и уплаты налогов.</p>
+        <div id="selling-accordion" class="space-y-3"></div>
+        <div>
+          <button class="checklist-btn" onclick="openModal('seller')">
+            <i class="fa-solid fa-file-arrow-down text-lg"></i>Скачать чеклист продавца
+          </button>
+        </div>
+      </div>
+      <div class="relative h-[260px] sm:h-[360px] lg:h-auto" data-aos="fade-left">
+        <img
+          src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2Fjkifs782SmLAjZhbLkyVS%2FDSC00863_resized.jpg"
+          alt="Продажа недвижимости"
+          class="w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent hidden lg:block pointer-events-none"></div>
+        <div class="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 bg-white rounded-2xl p-4 shadow-xl z-10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+              <i class="fa-solid fa-circle-dollar-to-slot text-green-600"></i>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Продажа</div>
+              <div class="text-gray-500 text-xs">4 этапа успешной сделки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="renting" class="bg-[#f8f9fc] overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2">
+      <div class="relative h-[260px] sm:h-[360px] lg:h-auto order-2 lg:order-1" data-aos="fade-right">
+        <img
+          src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FlJv3i9N7NY-jT12lUTuwvE%2FDSC01009_resized.jpg"
+          alt="Аренда недвижимости"
+          class="w-full h-full object-cover object-top"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#f8f9fc] hidden lg:block pointer-events-none"></div>
+        <div class="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 bg-white rounded-2xl p-4 shadow-xl z-10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+              <i class="fa-solid fa-file-contract text-amber-600"></i>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Аренда</div>
+              <div class="text-gray-500 text-xs">Совет арендаторов и арендодателей</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center px-5 sm:px-10 lg:px-14 py-10 lg:py-16 order-1 lg:order-2" data-aos="fade-left">
+        <div class="section-badge">Аренда</div>
+        <h2 class="section-title mb-3">Руководство по аренде</h2>
+        <div class="section-divider mb-8"></div>
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center">
+                <i class="fa-solid fa-user text-primary-600 text-sm"></i>
+              </div>
+              <h3 class="font-bold text-gray-900">Арендаторы</h3>
+            </div>
+            <div id="tenant-accordion" class="space-y-2"></div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center">
+                <i class="fa-solid fa-house-user text-green-600 text-sm"></i>
+              </div>
+              <h3 class="font-bold text-gray-900">Арендодатели</h3>
+            </div>
+            <div id="landlord-accordion" class="space-y-2"></div>
+          </div>
+        </div>
+        <div>
+          <button class="checklist-btn" onclick="openModal('renter')">
+            <i class="fa-solid fa-file-arrow-down text-lg"></i>Скачать чеклист по аренде
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="geography" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-badge">География</div>
+      <h2 class="section-title">Города присутствия</h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="text-gray-500 mt-4">Работаю с недвижимостью в ключевых городах Дальнего Востока</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" data-aos="fade-up">
+      <div class="geo-card"><div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-star text-primary-600 text-xl"></i></div><div class="font-bold text-gray-900 text-sm mb-1">Комсомольск-на-Амуре</div><div class="stat-number text-2xl">47</div><div class="text-gray-500 text-xs mt-1">объектов</div></div>
+      <div class="geo-card"><div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-city text-blue-600 text-xl"></i></div><div class="font-bold text-gray-900 text-sm mb-1">Хабаровск</div><div class="stat-number text-2xl">23</div><div class="text-gray-500 text-xs mt-1">объектов</div></div>
+      <div class="geo-card"><div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-anchor text-green-600 text-xl"></i></div><div class="font-bold text-gray-900 text-sm mb-1">Владивосток</div><div class="stat-number text-2xl">15</div><div class="text-gray-500 text-xs mt-1">объектов</div></div>
+      <div class="geo-card"><div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-bridge text-purple-600 text-xl"></i></div><div class="font-bold text-gray-900 text-sm mb-1">Благовещенск</div><div class="stat-number text-2xl">11</div><div class="text-gray-500 text-xs mt-1">объектов</div></div>
+      <div class="geo-card col-span-2 md:col-span-1"><div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-leaf text-orange-600 text-xl"></i></div><div class="font-bold text-gray-900 text-sm mb-1">Биробиджан</div><div class="stat-number text-2xl">8</div><div class="text-gray-500 text-xs mt-1">объектов</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="certs" class="py-20 bg-[#f8f9fc]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-badge">Квалификация</div>
+      <h2 class="section-title">Дипломы и сертификаты</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" id="certs-gallery" data-aos="fade-up"></div>
+  </div>
+</section>
+
+<div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+  <div class="flex flex-col items-center gap-4 relative p-4">
+    <button onclick="closeLightbox()" class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-white text-gray-800 font-bold flex items-center justify-center shadow-lg z-10 hover:bg-gray-100" aria-label="Закрыть">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="shadow-2xl" />
+    <p id="lightbox-caption" class="text-white text-center font-medium text-sm max-w-sm"></p>
+  </div>
+</div>
+
+<section id="reviews" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-badge">Отзывы</div>
+      <h2 class="section-title">Что говорят клиенты</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="flex text-amber-400 mb-4 relative z-10"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-gray-600 leading-relaxed mb-6 relative z-10 text-sm">«Елена помогла нам продать срубокнатную квартиру в рекордные сроки – всего за 3 недели! Профессионализм на каждом этапе. Все документы оформлены безупречно. Однозначно рекомендую!»</p>
+        <div class="flex items-center gap-3 relative z-10"><div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center font-bold text-primary-700">АВ</div><div><div class="font-semibold text-gray-900 text-sm">Андрей Валинин</div><div class="text-gray-400 text-xs">Продал квартиру в Комсомольске-на-Амуре</div></div></div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex text-amber-400 mb-4 relative z-10"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-gray-600 leading-relaxed mb-6 relative z-10 text-sm">«Покупали квартиру в ипотеку первый раз, были очень напуганы. Елена вела нас за руку весь процесс, объяснила каждый этап. Теперь мы счастливые владельцы двушки в новостройке!»</p>
+        <div class="flex items-center gap-3 relative z-10"><div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-700">МС</div><div><div class="font-semibold text-gray-900 text-sm">Мария и Сергей</div><div class="text-gray-400 text-xs">Купили квартиру в ипотеку</div></div></div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex text-amber-400 mb-4 relative z-10"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-gray-600 leading-relaxed mb-6 relative z-10 text-sm">«Обращались к Елене по рекомендации. Помогла найти хорошего арендатора, составила грамотный договор. Уже два года без проблем. Отличный специалист!»</p>
+        <div class="flex items-center gap-3 relative z-10"><div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-600">ОП</div><div><div class="font-semibold text-gray-900 text-sm">Ольга Петрова</div><div class="text-gray-400 text-xs">Сдала квартиру через Елену</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="bg-[#f8f9fc] overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2">
+      <div class="relative hidden lg:block" data-aos="fade-right">
+        <img src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FcUEh6F7Jo2GGFgT4HpP3Q%2FDSC00939_resized.jpg" alt="Связаться с Еленой Булавинцевой" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#f8f9fc] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-auto max-w-xs bg-gradient-to-t from-primary-950/95 to-transparent p-8 z-10">
+          <p class="text-white font-serif text-xl font-semibold mb-4">Свяжитесь со мной</p>
+          <div class="space-y-3">
+            <a href="tel:+79991234567" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"><i class="fa-solid fa-phone w-4"></i>+7 (999) 123-45-67</a>
+            <a href="mailto:elena@example.com" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"><i class="fa-solid fa-envelope w-4"></i>elena@example.com</a>
+            <a href="https://t.me/elena_bulavintseva" target="_blank" rel="noopener" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"><i class="fa-brands fa-telegram w-4"></i>@elena_bulavintseva</a>
+          </div>
+          <div class="flex gap-3 mt-5">
+            <a href="https://t.me/elena_bulavintseva" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn bg-[#229ED9] text-white hover:opacity-90 w-9 h-9"><i class="fa-brands fa-telegram text-sm"></i></a>
+            <a href="https://wa.me/79991234567" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn bg-[#25D366] text-white hover:opacity-90 w-9 h-9"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+            <a href="https://max.ru/elena_bulavintseva" target="_blank" rel="noopener" aria-label="Max Messenger" class="social-btn bg-[#0088CC] text-white hover:opacity-90 w-9 h-9 text-xs font-bold">Max</a>
+          </div>
+        </div>
+      </div>
+      <div class="lg:hidden relative h-56" data-aos="fade-up">
+        <img src="https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FcUEh6F7Jo2GGFgT4HpP3Q%2FDSC00939_resized.jpg" alt="Елена Булавинцева" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-primary-950/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div class="space-y-1.5">
+            <a href="tel:+79991234567" class="flex items-center gap-2 text-white text-sm"><i class="fa-solid fa-phone text-xs"></i>+7 (999) 123-45-67</a>
+            <a href="https://t.me/elena_bulavintseva" class="flex items-center gap-2 text-white text-sm"><i class="fa-brands fa-telegram text-xs"></i>@elena_bulavintseva</a>
+          </div>
+          <div class="flex gap-2">
+            <a href="https://t.me/elena_bulavintseva" target="_blank" rel="noopener" class="social-btn bg-[#229ED9] text-white w-9 h-9"><i class="fa-brands fa-telegram text-sm"></i></a>
+            <a href="https://wa.me/79991234567" target="_blank" rel="noopener" class="social-btn bg-[#25D366] text-white w-9 h-9"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+            <a href="https://max.ru/elena_bulavintseva" target="_blank" rel="noopener" aria-label="Max Messenger" class="social-btn bg-[#0088CC] text-white w-9 h-9 text-xs font-bold">Max</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center px-5 sm:px-10 lg:px-14 py-10 lg:py-16" data-aos="fade-left">
+        <div class="section-badge">Контакты</div>
+        <h2 class="section-title mb-3">Отправить сообщение</h2>
+        <div class="section-divider mb-8"></div>
+        <form id="contact-form" novalidate class="space-y-4">
+          <div>
+            <label for="c-name" class="block text-sm font-medium text-gray-700 mb-1.5">Имя <span class="text-red-500">*</span></label>
+            <input type="text" id="c-name" name="name" required placeholder="Ваше имя" class="input-field" />
+          </div>
+          <div>
+            <label for="c-phone" class="block text-sm font-medium text-gray-700 mb-1.5">Телефон <span class="text-red-500">*</span></label>
+            <input type="tel" id="c-phone" name="phone" required placeholder="+7 (___) ___-__-__" class="input-field" />
+          </div>
+          <div>
+            <label for="c-msg" class="block text-sm font-medium text-gray-700 mb-1.5">Сообщение</label>
+            <textarea id="c-msg" name="message" rows="4" placeholder="Опишите вашу задачу..." class="input-field resize-none"></textarea>
+          </div>
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" id="c-consent" name="consent" required class="mt-0.5 w-4 h-4 accent-primary-600 flex-shrink-0" />
+            <span class="text-xs text-gray-500 leading-relaxed">Я согласен(а) с <a href="#" class="text-primary-600 hover:underline">политикой конфиденциальности</a> и даю согласие на обработку персональных данных.</span>
+          </label>
+          <button type="submit" class="btn-primary w-full py-4 text-base">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Отправить сообщение
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-house-chimney text-white/70 text-sm"></i>
+          </div>
+          <span class="font-serif font-bold text-white text-lg">Елена Булавинцева</span>
+        </div>
+        <span class="text-white/40 hidden sm:block">·</span>
+        <span class="text-white/50 text-sm flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-xs"></i>г. Комсомольск-на-Амуре, ул. Ленина, д. 45</span>
+      </div>
+      <p class="text-white/50 text-sm">© 2024 Елена Булавинцева. Все права защищены.</p>
+      <div class="flex gap-5 text-sm">
+        <a href="#" class="text-white/50 hover:text-white transition-colors">Политика конфиденциальности</a>
+        <a href="#" class="text-white/50 hover:text-white transition-colors">Согласие на данные</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 id="modal-title" class="font-bold text-xl text-gray-900">Получить чеклист</h2>
+        <p class="text-gray-500 text-sm mt-1">Перезвоним в течение 5 минут</p>
+      </div>
+      <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors" aria-label="Закрыть">
+        <i class="fa-solid fa-xmark text-gray-600"></i>
+      </button>
+    </div>
+    <form id="modal-form" novalidate class="space-y-4">
+      <div>
+        <label for="m-name" class="block text-sm font-medium text-gray-700 mb-1.5">Имя <span class="text-red-500">*</span></label>
+        <input type="text" id="m-name" name="name" required placeholder="Ваше имя" class="input-field" />
+      </div>
+      <div>
+        <label for="m-phone" class="block text-sm font-medium text-gray-700 mb-1.5">Телефон <span class="text-red-500">*</span></label>
+        <input type="tel" id="m-phone" name="phone" required placeholder="+7 (___) ___-__-__" class="input-field" />
+      </div>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" id="m-consent" name="consent" required class="mt-0.5 w-4 h-4 accent-primary-600 flex-shrink-0" />
+        <span class="text-xs text-gray-500 leading-relaxed">Согласен(а) с <a href="#" class="text-primary-600 hover:underline">политикой конфиденциальности</a>.</span>
+      </label>
+      <button type="submit" class="btn-primary w-full py-3.5">
+        <i class="fa-solid fa-envelope-open-text mr-2"></i>Получить чеклист
+      </button>
+    </form>
+  </div>
+</div>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+const BASE = 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2F';
+const properties = [
+  { type:'Продажа', img:'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'3 200 000 ₽', address:'ул. Ленина, 47, Комсомольск-на-Амуре', area:'62 м²', rooms:'2-комнатная', floor:'5/9' },
+  { type:'Продажа', img:'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'5 800 000 ₽', address:'пр. Октябрьский, 12, Комсомольск-на-Амуре', area:'89 м²', rooms:'3-комнатная', floor:'3/10' },
+  { type:'Аренда',  img:'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'18 000 ₽/мес', address:'ул. Вита, 22, Комсомольск-на-Амуре', area:'45 м²', rooms:'1-комнатная', floor:'2/5' },
+  { type:'Продажа', img:'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'2 100 000 ₽', address:'ул. Советская, 88, Комсомольск-на-Амуре', area:'38 м²', rooms:'Студия', floor:'7/12' },
+  { type:'Аренда',  img:'https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'25 000 ₽/мес', address:'ул. Лирова, 5, Хабаровск', area:'58 м²', rooms:'2-комнатная', floor:'4/9' },
+  { type:'Продажа', img:'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', price:'7 400 000 ₽', address:'пр. Лита, 33, Хабаровск', area:'110 м²', rooms:'4-комнатная', floor:'6/16' },
+];
+
+const buyingSteps = [
+  { title:'Шаг 1. Критерии и поиск', body:'Формулируем ваши требования: район, площадь, этаж, бюджет. Анализируем сруки и отбираю только подходящие варианты – без лишних просмотров.' },
+  { title:'Шаг 2. Юридическая проверка', body:'Запрашиваем выписки из ЕГРН, проверяем историю собственности, обременения, задолженности. Это ключевой этап для вашей безопасности.' },
+  { title:'Шаг 3. Переговоры', body:'Ведем переговоры с продавцом о цене и условиях. Фиксируем договоренности в предварительном договоре с задатком.' },
+  { title:'Шаг 4. Финансирование', body:'Подбираю банк с лучшими условиями ипотеки, помогаю собрать документы. Работаю с маткапиталом, военной ипотекой, субсидиями.' },
+  { title:'Шаг 5. Договор и регистрация', body:'Подписываем договор, проводим безопасный расчет через сейф или аккредитив. Подаем документы на регистрацию и передаем ключи.' },
+];
+
+const sellingSteps = [
+  { title:'Шаг 1. Оценка стоимости', body:'Анализирую актуальные предложения, определяю оптимальную цену. Ищем баланс между скоростью продажи и вашей выгодой.' },
+  { title:'Шаг 2. Подготовка документов', body:'Проверяю наличие и актуальность документов: правоустанавливающих, техпаспорта, справочек о прописке.' },
+  { title:'Шаг 3. Реклама и показы', body:'Организую профессиональную фотосъемку, размещаю на 15+ площадках, провожу показы и работаю с интересом покупателями.' },
+  { title:'Шаг 4. Сделка и налоги', body:'Согласовываем условия, подписываем договор, проводим расчет. Консультирую по НДФЛ и налоговым вычетам.' },
+];
+
+const tenantSteps = [
+  { title:'Как безопасно снять квартиру', body:'Проверяем документы собственника и право сдавать жилье. Осматриваем объект, фиксируем дефекты в акте. Заключаем договор с четкими условиями.' },
+  { title:'На что обратить внимание в договоре', body:'Депозит и условия возврата, коммунальные платежи, ответственность за имущество, условия посещения собственником.' },
+];
+
+const landlordSteps = [
+  { title:'Как сдать и защитить себя', body:'Проверяем арендатора, составляем полный акт с фотографиями имущества. Договор с обеспечительным платежом – лучшая защита интересов.' },
+  { title:'Налоги при сдаче в аренду', body:'Физлица платит НДФЛ 13%. Можно оформить самозанятость – 4%. Помогаю выбрать оптимальный режим налогообложения.' },
+];
+
+const certificates = [
+  { img: 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2Fov8Rq78-Lh4wcFGpR-UVb%2Fimg-260406181250-001.jpg', caption: 'Сертификат участника клуба миллионеров по итогам 2019 года – ETAGI' },
+  { img: 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2F20nKFUp9JAGTN2aOEpuKi%2Fimg-260406181320-001.jpg', caption: 'Диплом серебряного приза по итогам результатов за период 01.11.2018–01.11.2019 – Этажи' },
+  { img: 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FxVvg93rz1YT11wNKu9I9p%2Fimg-260406181350-001-fixed.jpg', caption: '«Я – Миллионер!» Почетный член клуба «Миллионеров» по результатам 2020 г. – Этажи' },
+  { img: 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2F3wrClurh3baiQo0WY9m_U%2Fimg-260406181416-001.jpg', caption: 'Грамота в номинации «Лидер сентября» – Этажи, Комсомольск-на-Амуре' },
+  { img: 'https://storage.googleapis.com/runable-templates/cli-uploads%2Fn1etJm0MVcepyN75MWmMNHTNBVUA6hRB%2FdbivKObQccI4or-8yeKdl%2Fimg-260406181438-001.jpg', caption: 'Грамота победителя в номинации «Лучший сотрудник по итогам 3 кв. 2019 г.» – Этажи' },
+];
+
+function renderListings() {
+  document.getElementById('listings-grid').innerHTML = properties.map((p,i) => `
+    <div class="card" data-aos="fade-up" data-aos-delay="${i*60}">
+      <div class="relative overflow-hidden">
+        <img src="${p.img}" alt="${p.address}" class="property-img" loading="lazy" />
+        <div class="property-badge">${p.type}</div>
+      </div>
+      <div class="p-6">
+        <div class="text-2xl font-bold text-primary-700 font-serif mb-2">${p.price}</div>
+        <div class="flex items-start gap-2 text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mt-0.5 text-primary-400 flex-shrink-0"></i><span>${p.address}</span></div>
+        <div class="flex gap-3 text-sm text-gray-600 mb-5 flex-wrap">
+          <span class="flex items-center gap-1.5 bg-gray-50 rounded-lg px-3 py-1.5"><i class="fa-solid fa-ruler-combined text-primary-400 text-xs"></i>${p.area}</span>
+          <span class="flex items-center gap-1.5 bg-gray-50 rounded-lg px-3 py-1.5"><i class="fa-solid fa-door-open text-primary-400 text-xs"></i>${p.rooms}</span>
+          <span class="flex items-center gap-1.5 bg-gray-50 rounded-lg px-3 py-1.5"><i class="fa-solid fa-building text-primary-400 text-xs"></i>Этаж ${p.floor}</span>
+        </div>
+        <button onclick="requestViewing('${p.address}')" class="btn-primary w-full py-3 text-sm">
+          <i class="fa-solid fa-calendar-plus mr-2"></i>Записаться на просмотр
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAccordion(id, steps, numbered=true) {
+  const el = document.getElementById(id);
+  el.innerHTML = steps.map((s,i) => `
+    <div class="accordion-item">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="flex items-center">
+          ${numbered ? `<span class="step-number">${i+1}</span>` : ''}
+          ${s.title}
+        </span>
+        <i class="fa-solid fa-chevron-down accordion-chevron text-gray-400 ml-4 text-sm"></i>
+      </button>
+      <div class="accordion-body"><p>${s.body}</p></div>
+    </div>
+  `).join('');
+  el.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.accordion-item');
+      const wasOpen = item.classList.contains('open');
+      el.querySelectorAll('.accordion-item.open').forEach(x => { x.classList.remove('open'); x.querySelector('.accordion-btn').setAttribute('aria-expanded','false'); });
+      if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+}
+
+function renderCerts() {
+  const icons = ['fa-certificate','fa-award','fa-trophy','fa-medal','fa-star'];
+  document.getElementById('certs-gallery').innerHTML = certificates.map((c,i) => `
+    <div class="cert-card" onclick="openLightbox(${i})" tabindex="0" role="button"
+         aria-label="Открыть: ${c.caption}" onkeydown="if(event.key==='Enter')openLightbox(${i})"
+         data-aos="fade-up" data-aos-delay="${i*80}">
+      <div class="cert-cover">
+        <div class="cert-cover-icon"><i class="fa-solid ${icons[i] || 'fa-certificate'}"></i></div>
+        <div class="cert-cover-title">${c.caption}</div>
+        <div class="cert-cover-hint"><i class="fa-solid fa-eye text-xs"></i> Нажмите, чтобы открыть</div>
+      </div>
+      <div class="cert-img-wrap">
+        <img src="${c.img}" alt="${c.caption}" loading="lazy" />
+      </div>
+    </div>
+  `).join('');
+}
+
+function openLightbox(i) {
+  const c = certificates[i];
+  document.getElementById('lightbox-img').src = c.img;
+  document.getElementById('lightbox-img').alt = c.caption;
+  document.getElementById('lightbox-caption').textContent = c.caption;
+  document.getElementById('lightbox-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox-overlay').addEventListener('click', e => { if(e.target===document.getElementById('lightbox-overlay')) closeLightbox(); });
+
+const checklistNames = { buyer:'покупателя', seller:'продавца', renter:'по аренде' };
+let currentChecklist = '';
+function openModal(type) {
+  currentChecklist = type;
+  document.getElementById('modal-title').textContent = `Получить чеклист ${checklistNames[type]}`;
+  document.getElementById('modal-form').reset();
+  document.getElementById('modal-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('m-name').focus(), 100);
+}
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('modal-overlay').addEventListener('click', e => { if(e.target===document.getElementById('modal-overlay')) closeModal(); });
+document.getElementById('modal-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('m-name').value.trim();
+  const phone = document.getElementById('m-phone').value.trim();
+  if (!name) { document.getElementById('m-name').focus(); return; }
+  if (!phone||phone.length<6) { document.getElementById('m-phone').focus(); return; }
+  if (!document.getElementById('m-consent').checked) { alert('Пожалуйста, дайте согласие на обработку данных'); return; }
+  closeModal();
+  setTimeout(() => alert(`Спасибо, ${name}! Мы свяжемся с вами по номеру ${phone} и отправим чеклист ${checklistNames[currentChecklist]}. (демо)`), 300);
+});
+
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('c-name').value.trim();
+  const phone = document.getElementById('c-phone').value.trim();
+  if (!name) { document.getElementById('c-name').focus(); return; }
+  if (!phone) { document.getElementById('c-phone').focus(); return; }
+  if (!document.getElementById('c-consent').checked) { alert('Пожалуйста, дайте согласие на обработку данных'); return; }
+  alert(`Спасибо, ${name}! Я свяжусь с вами в ближайшее время. (демо)`);
+  e.target.reset();
+});
+
+function requestViewing(addr) {
+  alert(`Заявка на просмотр:\n${addr}\n\nЕлена свяжется с вами для согласования времени. (демо)`);
+}
+
+const navbar = document.getElementById('navbar');
+const backTop = document.getElementById('back-top');
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 50);
+  backTop.classList.toggle('visible', y > 400);
+  progressBar.style.width = (y / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+});
+
+const burgerBtn = document.getElementById('burger-btn');
+const burgerIcon = document.getElementById('burger-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuBackdrop = document.getElementById('menu-backdrop');
+function openMenu() { mobileMenu.classList.add('open'); menuBackdrop.classList.remove('hidden'); document.body.style.overflow='hidden'; burgerBtn.setAttribute('aria-expanded','true'); burgerIcon.className='fa-solid fa-xmark text-xl'; }
+function closeMenu() { mobileMenu.classList.remove('open'); menuBackdrop.classList.add('hidden'); document.body.style.overflow=''; burgerBtn.setAttribute('aria-expanded','false'); burgerIcon.className='fa-solid fa-bars text-xl'; }
+burgerBtn.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
+document.getElementById('close-menu').addEventListener('click', closeMenu);
+menuBackdrop.addEventListener('click', closeMenu);
+document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if(e.key==='Escape') { closeMenu(); closeModal(); closeLightbox(); } });
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderListings();
+  renderAccordion('buying-accordion', buyingSteps, true);
+  renderAccordion('selling-accordion', sellingSteps, true);
+  renderAccordion('tenant-accordion', tenantSteps, false);
+  renderAccordion('landlord-accordion', landlordSteps, false);
+  renderCerts();
+  AOS.init({ duration:700, once:true, offset:60, easing:'ease-out-cubic' });
+});
+</script>
+</body>
+</html>

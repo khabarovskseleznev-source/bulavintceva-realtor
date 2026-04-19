@@ -1,0 +1,15 @@
+# Секреты
+.env
+*.env
+.mcp.json
+backend/config.php
+backend/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
